@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>My Basic Profile</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #6fb1c7, #3a7ca5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Animation عند تحميل الصفحة */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            background: #fff;
+            width: 700px;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+
+            animation: fadeInUp 1s ease;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover على الكارد */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .logo {
+            width: 300px;
+            height: 200px;
+            margin-bottom: 5px;
+            transition: transform 0.3s;
+        }
+
+        /* حركة اللوجو */
+        .logo:hover {
+            transform: scale(1.4);
+        }
+
+        h1 {
+            margin: 10px 0;
+            font-size: 35px;
+            color: #333;
+        }
+
+        h2 {
+            font-size: 25px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .divider {
+            width: 0;
+            height: 2px;
+            background: #3a7ca5;
+            margin: 20px auto;
+            transition: 0.5s;
+        }
+
+        /* Animation للخطوط */
+        .card:hover .divider {
+            width: 80%;
+        }
+
+        .info {
+            text-align: right;
+            margin: 12px 0;
+            font-size: 22px;
+            transition: 0.3s;
+        }
+
+        /* Hover على كل سطر */
+        .info:hover {
+            transform: translateX(-5px);
+            color: #3a7ca5;
+        }
+
+        .info span {
+            font-weight: bold;
+            color: #3a7ca5;
+        }
+
+        .email {
+            color: #0077cc;
+            text-decoration: none;
+            position: relative;
+        }
+
+        /* underline animation */
+        .email::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 2px;
+            background: #0077cc;
+            transition: 0.3s;
+        }
+
+        .email:hover::after {
+            width: 100%;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #222;
+            transition: 0.3s;
+        }
+
+        .footer:hover {
+            letter-spacing: 1px;
+            color: #3a7ca5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        <img class="logo" src="logo.jpg" alt="Logo">
+
+        <h1>جامعة عين شمس</h1>
+        <h2>كلية تربية - تخصص تكنولوجيا التعليم الرقمي</h2>
+
+        <div class="divider"></div>
+
+        <div class="info"><span>المقرر:</span> تصميم المواقع</div>
+        <div class="info"><span>الدكتور:</span> محمد عنتر</div>
+
+        <div class="divider"></div>
+
+        <div class="info"><span>الاسم:</span> اسلام مجدي احمد ابراهيم</div>
+        <div class="info"><span>رقم الجلوس:</span> 2324007</div>
+        <div class="info">
+            <span>E-Mail:</span> 
+            <a class="email" href="mailto:free_edu2324007@edu.asu.edu.eg">
+                free_edu2324007@edu.asu.edu.eg
+            </a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="footer">
+            المستوى الثالث - الفصل الدراسي الثاني
+        </div>
+
+    </div>
+
+</body>
+</html>
